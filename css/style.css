@@ -1,0 +1,124 @@
+:root {
+  --neon-pink: #ff00ff;
+  --neon-cyan: #00ffff;
+  --bg: #000;
+  --text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  line-height: 1.6;
+  padding: 16px;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 16px 0;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.4rem;
+  color: var(--neon-pink);
+  text-shadow: 0 0 12px var(--neon-pink);
+  margin-bottom: 8px;
+}
+
+p {
+  opacity: 0.9;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+#dayCounter {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+button {
+  background: transparent;
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: none;
+}
+
+button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 12px var(--neon-cyan);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.day-card, .meal-plan {
+  border: 2px solid var(--neon-cyan);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 24px 0;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+h2, h3, h4 {
+  margin-bottom: 12px;
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin: 16px 0;
+  display: block;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+ul, .meal {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+li, .meal p {
+  margin: 8px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Адаптив под мобильные */
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .controls { flex-direction: column; gap: 10px; }
+  button { width: 100%; }
+}
